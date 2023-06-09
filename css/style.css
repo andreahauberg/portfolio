@@ -653,9 +653,7 @@ p {
   color: var(--hover-color);
 }
 
-.tema:link,
-.tema:visited,
-.tema:active{
+.tema:link{
  color: var(--h-color);
 }
 
