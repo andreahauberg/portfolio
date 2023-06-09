@@ -97,6 +97,7 @@ li {
 }
 
 a {
+  color: var(--navfont-color);
   text-decoration: none;
 }
 
