@@ -649,14 +649,13 @@ p {
   background-color: var(--header-color);
 }
 
-.tema:hover {
-  color: var(--hover-color);
-}
-
 .tema:link,
 .tema:visited,
 .tema:active{
  color: var(--h-color);
+}
+.tema:hover {
+  color: var(--hover-color);
 }
 
 #scroll-to-top {
