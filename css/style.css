@@ -97,7 +97,6 @@ li {
 }
 
 a {
-  color: var(--navfont-color);
   text-decoration: none;
 }
 
@@ -656,6 +655,12 @@ p {
 
 .tema:hover {
   color: var(--hover-color);
+}
+
+.tema:link,
+.tema:visited,
+.tema:active{
+ color: var(--h-color);
 }
 
 #scroll-to-top {
