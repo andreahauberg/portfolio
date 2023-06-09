@@ -499,11 +499,7 @@ p {
   }
 }
 
-.cv-svg:hover,
-.tema-svg:hover,
-.tema-svg:hover,
-.tema-svg:hover,
-.tema-svg:hover {
+.cv-svg:hover{
   cursor: pointer;
   animation-name: pulse;
   animation-duration: 3s;
