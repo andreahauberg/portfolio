@@ -1,0 +1,676 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --navfont-color: #051912;
+  --hover-color: #319b72;
+  --h-color: #0d261c;
+  --header-color: #c7ddb5;
+  --body-color: #ddead1;
+}
+
+/* DEFAULT STYLE */
+body {
+  background-color: var(--body-color);
+}
+
+header {
+  background-color: var(--header-color);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  padding-top: 4%;
+}
+
+@media (max-width: 768px) {
+  img {
+    padding-top: 0;
+  }
+}
+
+figure {
+  margin: 1em;
+}
+
+figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #777;
+  font-size: 1.5cqw;
+  padding: 1em;
+}
+@media (max-width: 768px) {
+  figcaption {
+    padding: 0.5em;
+    font-size: 3cqw;
+  }
+}
+
+h1 {
+  color: var(--h-color);
+  font-size: 6cqw;
+  font-family: trivial;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+h2 {
+  color: var(--h-color);
+  font-size: 3cqw;
+  font-family: rational;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 6cqw;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+/* FONTE */
+
+@font-face {
+  font-family: trivial;
+  src: url(trivial.ttf);
+}
+
+@font-face {
+  font-family: rational;
+  src: url(rational.ttf);
+}
+
+@font-face {
+  font-family: neonize;
+  src: url(neonize.ttf);
+}
+
+@font-face {
+  font-family: flowers;
+  src: url(flowers.ttf);
+}
+
+/* NAVIGATIONSMENU */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#head_logo {
+  width: 10%;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav_item {
+  background-color: var(--header-color);
+  font-size: 3cqw;
+}
+
+.nav_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.head_link {
+  font-family: trivial;
+  color: var(--navfont-color);
+}
+
+.head_link:hover {
+  color: var(--hover-color);
+  transition: 0.7s ease;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--navfont-color);
+}
+
+@media (max-width: 768px) {
+  .nav_menu {
+    position: absolute;
+    overflow: hidden;
+    left: -100%;
+    top: 4em;
+    gap: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav_item {
+    margin: 16px 16px;
+    font-size: 4cqw;
+  }
+
+  #head_logo {
+    width: 15%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    translate: 0 8px;
+    rotate: 45deg;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    translate: 0 -8px;
+    rotate: -45deg;
+  }
+
+  .nav_menu.active {
+    left: 0;
+  }
+}
+
+/* FOOTER */
+.copy {
+  padding-top: 20%;
+  font-family: rational;
+  margin-top: 20px;
+  font-size: 2cqw;
+  color: #777;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .copy {
+    font-size: 3cqw;
+  }
+}
+
+/* FORSIDE */
+#screen {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  z-index: -1;
+}
+
+#forside {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/forside.svg);
+  background-size: cover;
+}
+
+#star1 {
+  position: absolute;
+  aspect-ratio: 125/125;
+  rotate: 58deg;
+  top: 0;
+  left: 81%;
+  width: 18%;
+  background-image: url(../img/twinkle-star.svg);
+  background-size: cover;
+  animation-name: twinkle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+#star2 {
+  position: absolute;
+  aspect-ratio: 125/125;
+  rotate: -180deg;
+  top: 69%;
+  left: 2%;
+  width: 18%;
+  background-image: url(../img/twinkle-star.svg);
+  background-size: cover;
+  animation-name: twinkle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes twinkle {
+  0% {
+    rotate: -10deg;
+    scale: 0.25;
+  }
+
+  25% {
+    rotate: 10deg;
+    scale: 0.5;
+  }
+  50% {
+    rotate: -10deg;
+    scale: 0.25;
+  }
+
+  100% {
+    rotate: 10deg;
+    scale: 0.5;
+  }
+}
+
+#star3 {
+  position: absolute;
+  aspect-ratio: 125/125;
+  rotate: 58deg;
+  top: 0;
+  left: 15%;
+  width: 20%;
+  background-image: url(../img/twinkle-star.svg);
+  background-size: cover;
+  animation-name: twinkle2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+#star4 {
+  position: absolute;
+  aspect-ratio: 125/125;
+  rotate: -180deg;
+  top: 69%;
+  left: 80%;
+  width: 18%;
+  background-image: url(../img/twinkle-star.svg);
+  background-size: cover;
+  animation-name: twinkle2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes twinkle2 {
+  0% {
+    rotate: 10deg;
+    scale: 0.25;
+  }
+
+  25% {
+    rotate: -10deg;
+    scale: 0.5;
+  }
+  50% {
+    rotate: 10deg;
+    scale: 0.25;
+  }
+
+  100% {
+    rotate: -10deg;
+    scale: 0.5;
+  }
+}
+
+#tekst1 {
+  position: absolute;
+  top: 29%;
+  left: 46.8%;
+  font-family: flowers;
+  font-size: 3cqw;
+  rotate: 5.8deg;
+  color: var(--navfont-color);
+  animation-name: velkommen;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes velkommen {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+#tekst2 {
+  position: absolute;
+  top: 37%;
+  left: 47.5%;
+  font-family: flowers;
+  font-size: 3cqw;
+  rotate: 7.5deg;
+  color: var(--navfont-color);
+  animation-name: fadein;
+  animation-duration: 1.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes fadein {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  50% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+#tekst3 {
+  position: absolute;
+  top: 45%;
+  left: 49.5%;
+  font-family: flowers;
+  font-size: 3cqw;
+  rotate: 8.8deg;
+  color: var(--navfont-color);
+  animation-name: fadein2;
+  animation-duration: 2.4s;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes fadein2 {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  50% {
+    scale: 0;
+    opacity: 0;
+  }
+
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/* OM MIG SIDE */
+.grid-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  margin: 1em 1em;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .grid-1-1 {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  #section img:nth-of-type(1) {
+    order: -1;
+  }
+}
+
+#about-img {
+  padding-top: 0;
+}
+
+.about-text,
+#cv-content,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2cqw;
+  max-width: 64ch;
+  line-height: 2em;
+}
+
+.about-text {
+  margin-top: -2em;
+}
+
+@media (max-width: 768px) {
+  .about-text,
+  p {
+    margin-top: 2em;
+    font-size: 3.5cqw;
+  }
+}
+
+#cv-content {
+  display: none;
+  max-width: 80ch;
+}
+
+@media (max-width: 768px) {
+  #cv-content {
+    margin-top: 2em;
+    font-size: 4cqw;
+    max-width: 64ch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-p {
+    text-align: center;
+  }
+}
+
+.cv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1400px) {
+  .cv-svg {
+    width: 300%;
+  }
+}
+
+.cv-svg:hover,
+.tema-svg:hover,
+.tema-svg:hover,
+.tema-svg:hover,
+.tema-svg:hover {
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both, both;
+}
+
+@keyframes pulse {
+  0% {
+    scale: 1;
+  }
+
+  25% {
+    scale: 0.8;
+  }
+
+  50% {
+    scale: 1;
+  }
+
+  75% {
+    scale: 0.8;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.cv-open #cv-content {
+  display: block;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 200px;
+}
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
+
+.about-li {
+  margin-left: -40px;
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+  font-size: 5cqw;
+  font-family: rational;
+  background-color: var(--hover-color);
+  color: var(--navfont-color);
+  border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+  .close-button {
+    float: none;
+    font-size: 8cqw;
+  }
+}
+
+/* PORTFOLIO SIDE */
+
+.section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  margin: 1em 1em;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .section1 {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .section1 :nth-child(3) {
+    order: 4;
+  }
+
+  .section1 :nth-child(4) {
+    order: 3;
+  }
+  .section1 :nth-child(5) {
+    order: 6;
+  }
+  .section1 :nth-child(6) {
+    order: 7;
+  }
+
+  .section1 :nth-child(7) {
+    order: 8;
+  }
+  .section1 :nth-child(8) {
+    order: 7;
+  }
+
+  #section2 :nth-child(3) {
+    order: 4;
+  }
+}
+
+#portfolio-head {
+  text-align: center;
+}
+
+#portfolio-intro {
+  margin-left: 15%;
+  margin-bottom: 15%;
+}
+
+@media (max-width: 768px) {
+  #portfolio-intro {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.localnavbar {
+  font-family: trivial;
+  font-size: 4.8cqw;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .localnavbar {
+    gap: 30px;
+  }
+}
+
+.tema {
+  background-color: var(--header-color);
+}
+
+.tema:hover {
+  color: var(--hover-color);
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5cqw;
+  font-weight: bolder;
+  font-family: rational;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 1400px) {
+  #scroll-to-top {
+    width: 8%;
+  }
+}

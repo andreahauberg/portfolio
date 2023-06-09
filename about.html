@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg" href="img/star.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Om Mig</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div id="head_logo">
+          <a href="index.html" class="nav-logo">
+            <img src="img/my_logo.svg" alt="Andrea Hauberg logo" />
+          </a>
+        </div>
+        <ul class="nav_menu">
+          <li class="nav_item">
+            <a href="index.html" class="head_link">Forside</a>
+          </li>
+          <li class="nav_item">
+            <a href="portfolio.html" class="head_link">Portfolio</a>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="head_link">Om Mig</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Mit navn er Andrea</h1>
+
+      <section id="section" class="grid-1-1">
+        <div class="about-text">
+          <p>
+            Jeg er en 27-årig multimediedesign-studerende bosiddende i København
+            NV. Jeg er i øjeblikket på første semester på KEA, hvor jeg
+            udforsker den spændende verden af digitale medier, digitalt design,
+            frontendudvikling og -design. Gennem mit studieforløb har jeg
+            erhvervet mig en bred vifte af færdigheder, som inkluderer HTML,
+            CSS, JavaScript samt kendskab til UX-metoder og designprincipper.
+            Jeg er fortrolig med værktøjer som Photoshop, Adobe XD, Premiere Pro
+            og Adobe Illustrator, som jeg anvender til at udtrykke mine kreative
+            ideer og bringe dem til live.
+          </p>
+        </div>
+        <img id="about-img" src="img/portrait1.png" alt="" />
+        <img src="img/my_logo.svg" alt="" />
+        <div class="about-text">
+          <p>
+            Det er virkelig inspirerende for mig at arbejde inden for dette
+            felt. Jeg er fascineret af mulighederne ved at kombinere teknologi
+            og design for at skabe brugercentrerede løsninger. Jeg nyder at
+            udfordre mig selv og eksperimentere med forskellige visuelle
+            elementer og interaktionsmetoder for at skabe en meningsfuld og
+            engagerende brugeroplevelse. Tak fordi du tog dig tid til at læse om
+            mig. Jeg ser frem til at udforske nye designmuligheder og skabe
+            spændende projekter i fremtiden!
+          </p>
+        </div>
+      </section>
+      <br /><br /><br /><br />
+      <section class="cv cv-closed">
+        <div id="cv-img">
+          <img class="cv-svg" onclick="toggleCV()" src="img/cv.svg" alt="" />
+        </div>
+        <div id="cv-content">
+          <div class="cv-container">
+            <div class="cv-item">
+              <h2>Kontakt oplysninger</h2>
+              <p class="about-p">Navn: Andrea Jean Hauberg</p>
+              <p class="about-p">
+                Adresse: Mågevej 80 3.tv, 2400 København NV, Danmark
+              </p>
+              <p class="about-p">Telefon: 25 47 78 83</p>
+              <p class="about-p">E-mail: anha0003@stud.kea.dk</p>
+              <h2>Uddannelse</h2>
+              <p class="about-p">
+                Multimediedesign, 1. semester, KEA (Københavns Erhvervsakademi)
+              </p>
+            </div>
+            <div class="cv-item">
+              <h2>Færdigheder</h2>
+              <ul>
+                <li class="about-li">HTML</li>
+                <li class="about-li">CSS</li>
+                <li class="about-li">JavaScript</li>
+                <li class="about-li">UX metoder</li>
+                <li class="about-li">Designprincipper</li>
+                <li class="about-li">Photoshop</li>
+                <li class="about-li">Adobe XD</li>
+                <li class="about-li">Premiere Pro</li>
+                <li class="about-li">Adobe Illustrator</li>
+              </ul>
+            </div>
+          </div>
+          <button class="close-button" onclick="toggleCV()">X</button>
+        </div>
+      </section>
+
+      <br/><br/><br/><br/><br/>
+    </main>
+
+    <footer>
+      <div class="copy">
+        <p>&copy; 2023 Andrea Jean Hauberg. all rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/about.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>
