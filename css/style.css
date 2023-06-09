@@ -653,7 +653,8 @@ p {
   color: var(--hover-color);
 }
 
-.tema:link{
+.tema:link,
+.tema:active{
  color: var(--h-color);
 }
 
