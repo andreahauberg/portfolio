@@ -5,6 +5,7 @@
   --h-color: #0d261c;
   --header-color: #c7ddb5;
   --body-color: #ddead1;
+  --footer-color:#1b362b;
 }
 
 /* DEFAULT STYLE */
@@ -56,7 +57,7 @@ img {
 
 figcaption {
   font-family: Arial, Helvetica, sans-serif;
-  color: #777;
+  color: var(--footer-color);
   font-size: 1.5cqw;
   padding: 1em;
 }
@@ -230,20 +231,24 @@ a {
 }
 
 /* FOOTER */
-.copy {
-  padding-top: 20%;
+
+.footer-copy {
+  margin-left: 15%;
   font-family: rational;
-  margin-top: 20px;
   font-size: 2cqw;
-  color: #777;
-  text-align: left;
+  color: #1b362b;
+  text-align: center;
+  line-height: 1em;
 }
 
 @media (max-width: 768px) {
-  .copy {
-    font-size: 3cqw;
+  .footer-copy {
+    line-height: 0;
+    margin-left: 0;
+    font-size: 3.5cqw;
   }
 }
+
 
 /* FORSIDE */
 #screen {
