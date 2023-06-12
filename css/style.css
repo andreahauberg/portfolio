@@ -633,23 +633,60 @@ p {
 }
 
 .close-button {
-  float: right;
+  margin-left: 50%;
+  margin-top: 1em;
   cursor: pointer;
   font-size: 5cqw;
   font-family: rational;
   background-color: var(--hover-color);
   color: var(--navfont-color);
+  border-color: var(--h-color);
   border-radius: 20%;
+  border-width:0.08em
 }
 
 @media (max-width: 768px) {
   .close-button {
-    float: none;
+    margin-left: 0;
     font-size: 8cqw;
   }
 }
 
 /* PORTFOLIO SIDE */
+
+#grid-intro{
+  display: grid;
+  gap: 5em;
+  margin: 1em 1em;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom:4em;
+}
+
+@media (max-width: 768px) {
+  #grid-intro {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+
+#portfolio-img{
+  margin-top: 45%;
+}
+
+@media (max-width: 768px) {
+  #portfolio-img{
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 1400px) {
+  #portfolio-img{
+    margin-top: 40%;
+    margin-bottom: 15%;
+  }
+}
+
+
 
 .section1 {
   display: grid;
@@ -691,27 +728,6 @@ p {
   }
 }
 
-#portfolio-head {
-  text-align: center;
-}
-
-#portfolio-intro {
-  margin-left: 12%;
-  margin-bottom: 4em;
-}
-
-@media (max-width: 768px) {
-  #portfolio-intro {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-}
-
-@media (min-width: 900px) {
-  #portfolio-intro {
-    margin-left: 22%;
-  }
-}
 
 .localnavbar {
   font-family: trivial;
@@ -724,7 +740,6 @@ p {
   width: 100%;
   top: 0;
   backdrop-filter: blur(10px);
-  z-index: 99;
 }
 
 @media (max-width: 768px) {

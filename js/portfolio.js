@@ -6,6 +6,8 @@ window.onscroll = function() {
     }
   };
   
+  document.getElementById("scroll-to-top").addEventListener("click", scrollToTop);
+
   function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
