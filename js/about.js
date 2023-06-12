@@ -1,3 +1,5 @@
+document.querySelector('.cv-svg').addEventListener('click', toggleCV);
+
 document.querySelector('.close-button').addEventListener('click', toggleCV);
 
 function toggleCV() {
