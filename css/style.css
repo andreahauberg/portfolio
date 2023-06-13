@@ -6,6 +6,7 @@
   --header-color: #c7ddb5;
   --body-color: #ddead1;
   --footer-color: #1b362b;
+  --border-color:#9eae90;
 }
 
 /* DEFAULT STYLE */
@@ -383,7 +384,7 @@ a {
 #tekst1 {
   position: absolute;
   top: 29%;
-  left: 46.8%;
+  left: 46%;
   font-family: flowers;
   font-size: 3cqw;
   rotate: 5.8deg;
@@ -409,7 +410,7 @@ a {
 #tekst2 {
   position: absolute;
   top: 37%;
-  left: 47.5%;
+  left: 47%;
   font-family: flowers;
   font-size: 3cqw;
   rotate: 7.5deg;
@@ -440,7 +441,7 @@ a {
 #tekst3 {
   position: absolute;
   top: 45%;
-  left: 49.5%;
+  left: 49%;
   font-family: flowers;
   font-size: 3cqw;
   rotate: 8.8deg;
@@ -634,7 +635,7 @@ p {
   font-family: rational;
   background-color: var(--hover-color);
   color: var(--navfont-color);
-  border-color: var(--h-color);
+  border-color: var(--border-color);
   border-radius: 20%;
   border-width:0.08em
 }
@@ -722,32 +723,49 @@ p {
 
 .localnavbar {
   font-family: trivial;
-  font-size: 4cqw;
+  font-size: 2.5cqw;
   position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 45px;
+  gap: 10%;
   width: 100%;
   top: 0;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 @media (max-width: 768px) {
   .localnavbar {
-    font-size: 4.8cqw;
-    gap: 30px;
+    font-size: 4cqw;
+    padding-top: 10px;
+    margin-top: -10px;
   }
 }
 
 @media (min-width: 1200px) {
   .localnavbar {
-    font-size: 3cqw;
+    font-size: 2cqw;
   }
 }
 
 .tema {
   background-color: var(--header-color);
+  display: inline-block;
+  padding-bottom:15px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 10px;
+  color: var(--h-color);
+  border-color:var(--border-color);
+  border-width:0.08em;
+  border-style:solid;
+}
+
+@media (max-width: 768px) {
+  .tema {
+    padding-bottom: 8px;
+  }
 }
 
 .tema:link,
@@ -761,14 +779,18 @@ p {
 
 #scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 5cqw;
-  font-weight: bolder;
-  font-family: rational;
+  bottom: 2%;
+  right: 2%;
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
-  width: 8%;
+  width: 5%;
 }
+
+@media(max-width:768px){
+  #scroll-to-top {
+    width: 10%;
+  }
+}
+
 
